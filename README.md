@@ -1,6 +1,6 @@
-# bezierPaint
-
 ![](https://github.com/RafalLeja/bezierPaint/blob/main/showcase.png)
+
+# bezierPaint
 
 ## Program for creating letters with bezier curves
 
