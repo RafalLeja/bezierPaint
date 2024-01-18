@@ -25,11 +25,11 @@ def read_curves(src):
     if line[0] == "\"":
       if idx > 0:
         points = np.array([[pX[i], pY[i]] for i in range(len(pX))])
-        if type_name == "Bezier":
+        if type_name == "Bezier" or type_name == "bezier":
           beziers.append(points)
-        elif type_name == "Spline":
+        elif type_name == "Spline" or type_name == "NIFS3":
           nifs.append([pX, pY])
-        elif type_name == "Color":
+        elif type_name == "Color" or type_name == "Kolor":
           for i in range(len(pX)):
             colors.append([pX[i], pY[i]])
 
@@ -57,11 +57,11 @@ def read_curves(src):
       continue
 
   points = np.array([[pX[i], pY[i]] for i in range(len(pX))])
-  if type_name == "Bezier":
+  if type_name == "Bezier" or type_name == "bezier":
     beziers.append(points)
-  elif type_name == "Spline":
+  elif type_name == "Spline" or type_name == "NIFS3":
     nifs.append([pX, pY])
-  elif type_name == "Color":
+  elif type_name == "Color" or type_name == "Kolor":
     for i in range(len(pX)):
       colors.append([pX[i], pY[i]])
 
